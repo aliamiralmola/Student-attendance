@@ -167,3 +167,76 @@ body {
     cursor: pointer;
 }
 /* colors */
+
+
+/* tables */
+.resizable {
+    position: relative;
+  }
+  
+  .resizer {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    cursor: ew-resize;
+    z-index: 1;
+  }
+  .table6 {
+    display: flex;
+    flex-direction: column;
+    padding: inherit;
+    user-select: none;
+}
+
+.cell {
+    flex: 1;
+    border: 1px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+.cell:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: col-resize;
+}
+#time-bar , .time-bar {
+    height: 30px;
+    border-bottom: 1px solid black;
+    display: flex;
+    font-size: smaller;
+}
+
+#time-bar div , .time-bar div{
+    width: calc(100% / 12);
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.daycell{
+    width: 40px!important;
+    text-align: center;
+}
+
+.hidden{
+    opacity: 0.1;
+    position: absolute;
+    width: 96.5%;
+    transition: opacity 1s , background 1s;
+}
+.hidden:hover{
+    opacity: 1;
+    background: rgba(218, 165, 32);
+    z-index: 1;
+}
+.select-sch {
+    font-size: small;
+    background: 0%;
+    border: none;
+    width: 90%;
+}

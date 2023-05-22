@@ -169,7 +169,9 @@ if(isset($_GET['do'])){
                             ?>
                         </h3>
                         <hr>
+                        <!-- <iframe src="t2.php" frameborder="0" width="100%" height="100%"></iframe> -->
                     <?php
+                    include "t2.php";
                         if( isset($_GET["schedulebtn"]) ){
                             echo "success";
                         }
@@ -255,6 +257,21 @@ if(isset($_GET['do'])){
         </div>
     </div>
 </div>
+
+<script>
+onload = () => {
+    let cell = document.querySelectorAll('.cell');
+    for (var i=0; i<cell.length; i++){
+        cell[i].innerHTML = '<select class=" bg-none select-sch" name="" id="">'
+            +'<option value="" disabled> اختر مادة </option>'
+            +'<?php $n=$nr; while( $n <= $n2  ){ ?>'
+            +'<option value="<?php echo $n ?>"> <?php echo $lec[$n]; ?> </option>'
+            +'<?php $n++; } ?>'
+            +'</select>';
+    }
+}
+</script>
+
 <!-- footer include -->
 <?php
 include "templates/footer.php";
