@@ -1,5 +1,6 @@
-.gitignore
+*gitignore
 test.php
 t4.php
 t3.php
 table.php
+
